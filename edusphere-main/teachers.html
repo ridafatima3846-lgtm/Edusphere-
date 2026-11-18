@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers Management | EduSphere LMS</title>
+
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+=========================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <h2>EduSphere LMS</h2>
+    </div>
+
+    <ul>
+        <li>
+            <a href="admin-dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="teachers.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+            </a>
+        </li>
+        <li>
+            <a href="classes.html">
+                <i class="fa-solid fa-chalkboard"></i>
+                <span>Classes</span>
+            </a>
+        </li>
+        <li>
+            <a href="courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Courses</span>
+            </a>
+        </li>
+        <li>
+            <a href="results.html">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <span>Results</span>
+            </a>
+        </li>
+        <li>
+            <a href="announcements.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcements</span>
+            </a>
+        </li>
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li class="logout-item">
+            <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+<!--=========================
+        MAIN
+=========================-->
+
+<div class="main-content">
+
+    <div class="topbar">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="top-icons">
+            <i class="fa-regular fa-bell"></i>
+            <img src="images/admin-dashboard/admin_dashboard.png" alt="Profile">
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1>Teachers Management</h1>
+        <p>Add, edit and manage teacher records</p>
+    </div>
+
+    <div class="top-actions">
+        <input type="text" id="searchTeacher" placeholder="Search Teacher...">
+        <button id="addTeacherBtn">
+            <i class="fa-solid fa-plus"></i>
+            Add Teacher
+        </button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Subject</th>
+                    <th>Qualification</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="teacherTable">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!--=========================
+      ADD/EDIT TEACHER MODAL
+=========================-->
+
+<div class="modal" id="teacherModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalTitle">Add New Teacher</h2>
+        <form id="teacherForm">
+            <div class="input-group">
+                <label>Teacher ID</label>
+                <input type="text" id="teacherId" placeholder="Enter Teacher ID" required>
+            </div>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="teacherName" placeholder="Enter Teacher Name" required>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="teacherEmail" placeholder="Enter Email" required>
+            </div>
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" id="teacherPhone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="input-group">
+                <label>Subject</label>
+                <input type="text" id="teacherSubject" placeholder="e.g. Mathematics" required>
+            </div>
+            <div class="input-group">
+                <label>Qualification</label>
+                <select id="teacherQualification" required>
+                    <option value="">Select Qualification</option>
+                    <option>BS</option>
+                    <option>MS</option>
+                    <option>M.Phil</option>
+                    <option>PhD</option>
+                </select>
+            </div>
+            <button type="submit" class="save-btn">Save Teacher</button>
+        </form>
+    </div>
+</div>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/admin-sidebar.js"></script>
+<script src="js/teachers.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+</html>
+
+
+
+

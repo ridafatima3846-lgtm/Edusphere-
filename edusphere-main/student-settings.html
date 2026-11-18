@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | EduSphere LMS</title>
+
+    <link rel="stylesheet" href="css/student-dashboard.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+=========================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>EduSphere LMS</h2>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="student-dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-assignments.html">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-results.html">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <span>Results</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-announcements.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcements</span>
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="student-settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+        <li class="logout-item">
+            <a href="#" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!--=========================
+        MAIN
+=========================-->
+
+<div class="main-content">
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search...">
+
+        </div>
+
+        <div class="top-icons">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <img
+                src="images/admin-dashboard/admin_dashboard.png"
+                alt="Profile">
+
+        </div>
+
+    </div>
+
+    <!-- Page Header -->
+
+    <div class="page-header">
+
+        <h1>Settings</h1>
+
+        <p>
+            Manage your profile and account settings.
+        </p>
+
+    </div>
+
+    <!--=========================
+          SETTINGS CARDS
+    ==========================-->
+
+    <!-- Profile Card -->
+
+    <div class="settings-card">
+
+        <h2><i class="fa-solid fa-user"></i> Profile Information</h2>
+
+        <form id="profileForm">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="profileName"
+                    placeholder="Your name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="profileEmail"
+                    placeholder="Your email"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Phone</label>
+
+                <input
+                    type="tel"
+                    id="profilePhone"
+                    placeholder="Your phone number">
+
+            </div>
+
+            <button type="submit" class="save-btn">
+                Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Change Password Card -->
+
+    <div class="settings-card">
+
+        <h2><i class="fa-solid fa-lock"></i> Change Password</h2>
+
+        <form id="passwordForm">
+
+            <div class="input-group">
+
+                <label>Current Password</label>
+
+                <input
+                    type="password"
+                    id="currentPassword"
+                    placeholder="Enter current password"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>New Password</label>
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Enter new password"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Confirm New Password</label>
+
+                <input
+                    type="password"
+                    id="confirmNewPassword"
+                    placeholder="Confirm new password"
+                    required>
+
+            </div>
+
+            <button type="submit" class="save-btn">
+                Update Password
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/student-settings.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+
+</html>
+
+
+

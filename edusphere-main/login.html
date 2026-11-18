@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | EduSphere LMS</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+    <!--=========================
+            NAVBAR
+    ==========================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>EduSphere LMS</h2>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="features.html">Features</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="login.html" class="active">Login</a></li>
+
+                <li>
+                    <a href="register.html" class="demo-btn">
+                        Request Demo
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!--=========================
+            LOGIN SECTION
+    ==========================-->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <!-- Left Side -->
+
+            <div class="login-image">
+
+                <img src="images/login/login.svg" alt="Login Image">
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="login-form">
+
+                <h2>Welcome Back!</h2>
+
+                <p>
+                    Login to continue your learning journey.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                    <div class="input-box password-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required>
+
+    <i class="fa-solid fa-eye" id="togglePassword"></i>
+
+</div>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user-tag"></i>
+
+                        <select id="loginRole" required>
+
+                            <option value="">Select Role</option>
+
+                            <option value="admin">Admin</option>
+
+                            <option value="teacher">Teacher</option>
+
+                            <option value="student">Student</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="login-options">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#">Forgot Password?</a>
+
+                    </div>
+
+                    <button type="submit" class="login-btn">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+                <div class="social-login">
+
+                    <a href="#" class="google">
+
+                        <i class="fa-brands fa-google"></i>
+
+                        Login with Google
+
+                    </a>
+
+                    <a href="#" class="facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                        Login with Facebook
+
+                    </a>
+
+                </div>
+
+                <p class="register-link">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+
+                        Register Now
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/login.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+
+</html>
+
+

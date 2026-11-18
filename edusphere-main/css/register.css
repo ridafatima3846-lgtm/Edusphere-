@@ -1,0 +1,180 @@
+﻿/*==========================
+      REGISTER PAGE
+==========================*/
+
+.register-section{
+    min-height:100vh;
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 8%;
+}
+
+.register-container{
+    width:100%;
+    max-width:1200px;
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+}
+
+.register-image{
+    background:#1f5f8b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.register-image img{
+    width:100%;
+    max-width:450px;
+}
+
+.register-form{
+    padding:50px;
+}
+
+.register-form h2{
+    font-size:36px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.register-form p{
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+/*==========================
+        INPUT BOX
+==========================*/
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box i:first-child{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#6b7280;
+}
+
+.input-box input,
+.input-box select{
+    width:100%;
+    padding:15px 50px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+    box-sizing:border-box;
+    background:#ffffff;
+}
+
+.input-box input:focus,
+.input-box select:focus{
+    border-color:#1f5f8b;
+}
+
+/*==========================
+      PASSWORD ICON
+==========================*/
+
+.password-box{
+    position:relative;
+}
+
+.password-box #togglePassword,
+.password-box #toggleConfirmPassword{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#6b7280;
+}
+
+/*==========================
+        TERMS
+==========================*/
+
+.terms{
+    margin:20px 0;
+    font-size:15px;
+    color:#4b5563;
+}
+
+.terms label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/*==========================
+      REGISTER BUTTON
+==========================*/
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1f5f8b;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#174a6d;
+}
+
+/*==========================
+        LOGIN LINK
+==========================*/
+
+.login-link{
+    text-align:center;
+    margin-top:25px;
+}
+
+.login-link a{
+    text-decoration:none;
+    color:#1f5f8b;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.register-container{
+    grid-template-columns:1fr;
+}
+
+.register-image{
+    display:none;
+}
+
+.register-form{
+    padding:35px;
+}
+
+}

@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | EduSphere LMS</title>
+
+    <link rel="stylesheet" href="css/student-dashboard.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+=========================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>EduSphere LMS</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="student-dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>My Courses</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-assignments.html">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Assignments</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-results.html">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <span>Results</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-announcements.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcements</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="student-settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+        <li class="logout-item">
+            <a href="#" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!--=========================
+        MAIN
+=========================-->
+
+<div class="main-content">
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search...">
+
+        </div>
+
+        <div class="top-icons">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <img
+                src="images/admin-dashboard/admin_dashboard.png"
+                alt="Profile">
+
+        </div>
+
+    </div>
+
+    <!-- Welcome -->
+
+    <div class="welcome">
+
+        <h1>Welcome, <span id="studentName">Student</span></h1>
+
+        <p>
+            View your courses, assignments and results.
+        </p>
+
+    </div>
+
+    <!--=========================
+          STATISTICS CARDS
+    ==========================-->
+
+    <div class="stats-cards">
+
+        <div class="stat-card">
+
+            <div class="stat-icon courses-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="myCourses">0</h3>
+                <p>Enrolled Courses</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon assignments-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="myAssignments">0</h3>
+                <p>Assignments</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon results-icon">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="myResults">0</h3>
+                <p>Results</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon gpa-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="myGPA">-</h3>
+                <p>Average GPA</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+          DASHBOARD CONTENT
+    ==========================-->
+
+    <div class="dashboard-content">
+
+        <!-- Recent Activities -->
+
+        <div class="activities">
+
+            <h2>Recent Activities</h2>
+
+            <ul id="activitiesList">
+
+                <li>No recent activities yet.</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <a href="student-courses.html" class="action-btn">
+                <i class="fa-solid fa-book"></i>
+                View Courses
+            </a>
+
+            <a href="student-assignments.html" class="action-btn">
+                <i class="fa-solid fa-file-lines"></i>
+                View Assignments
+            </a>
+
+            <a href="student-results.html" class="action-btn">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                View Results
+            </a>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+          ENROLLED COURSES
+    ==========================-->
+
+    <div class="enrolled-courses">
+
+        <h2>My Enrolled Courses</h2>
+
+        <div class="course-cards" id="courseCards">
+
+            <p style="color:#6b7280;">No courses enrolled yet.</p>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+          ANNOUNCEMENTS
+    ==========================-->
+
+    <div class="announcement">
+
+        <h2>Latest Announcements</h2>
+
+        <div id="announcementsList">
+
+            <div class="announcement-card">
+
+                <h3>Welcome to Student Dashboard</h3>
+
+                <p>
+                    View your courses, assignments and results from one place.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/student-dashboard.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+
+</html>
+
+
+

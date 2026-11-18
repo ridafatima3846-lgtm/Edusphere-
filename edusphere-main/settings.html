@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | EduSphere LMS</title>
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo"><h2>EduSphere LMS</h2></div>
+    <ul>
+        <li><a href="admin-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+        <li><a href="students.html"><i class="fa-solid fa-user-graduate"></i><span>Students</span></a></li>
+        <li><a href="teachers.html"><i class="fa-solid fa-chalkboard-user"></i><span>Teachers</span></a></li>
+        <li><a href="classes.html"><i class="fa-solid fa-chalkboard"></i><span>Classes</span></a></li>
+        <li><a href="courses.html"><i class="fa-solid fa-book-open"></i><span>Courses</span></a></li>
+        <li><a href="results.html"><i class="fa-solid fa-square-poll-vertical"></i><span>Results</span></a></li>
+        <li><a href="announcements.html"><i class="fa-solid fa-bullhorn"></i><span>Announcements</span></a></li>
+        <li class="active"><a href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+        <li class="logout-item"><a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="topbar">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="top-icons">
+            <i class="fa-regular fa-bell"></i>
+            <img src="images/admin-dashboard/admin_dashboard.png" alt="Profile">
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1>Settings</h1>
+        <p>Manage your profile and account settings</p>
+    </div>
+
+    <div class="settings-grid">
+
+        <!-- Profile Section -->
+        <div class="settings-card">
+            <h2><i class="fa-solid fa-user"></i> Profile Information</h2>
+            <form id="profileForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="profileName" placeholder="Admin Name">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="profileEmail" placeholder="admin@edusphere.com">
+                </div>
+                <div class="input-group">
+                    <label>Phone</label>
+                    <input type="text" id="profilePhone" placeholder="+92 300 1234567">
+                </div>
+                <button type="submit" class="save-btn">Save Profile</button>
+            </form>
+        </div>
+
+        <!-- Change Password Section -->
+        <div class="settings-card">
+            <h2><i class="fa-solid fa-lock"></i> Change Password</h2>
+            <form id="passwordForm">
+                <div class="input-group">
+                    <label>Current Password</label>
+                    <input type="password" id="currentPassword" placeholder="Enter current password">
+                </div>
+                <div class="input-group">
+                    <label>New Password</label>
+                    <input type="password" id="newPassword" placeholder="Enter new password">
+                </div>
+                <div class="input-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" placeholder="Confirm new password">
+                </div>
+                <button type="submit" class="save-btn">Update Password</button>
+            </form>
+        </div>
+
+        <!-- Danger Zone -->
+        <div class="settings-card danger-zone">
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h2>
+            <p>These actions are irreversible. Please be careful.</p>
+            <button id="clearDataBtn" class="danger-btn">
+                <i class="fa-solid fa-trash"></i>
+                Clear All Data
+            </button>
+            <button id="logoutBtn" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+        </div>
+
+    </div>
+</div>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/admin-sidebar.js"></script>
+<script src="js/settings.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+</html>
+
+
+
+

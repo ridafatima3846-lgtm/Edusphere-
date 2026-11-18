@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1f5f8b">
+  <title>EduSphere LMS | Academic Workspace</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark"><i class="fa-solid fa-graduation-cap"></i></span>
+        <div class="brand-copy">
+          <strong>EduSphere</strong>
+          <span>Academic Workspace</span>
+        </div>
+        <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close navigation"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="sidebar-institution" id="institutionLabel">EduSphere University</div>
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Main navigation"></nav>
+      <div class="sidebar-foot">
+        <button class="side-link" data-action="open-settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+        <button class="side-link" data-action="go-home"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Back to website</span></button>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+          <div class="term-chip"><i class="fa-regular fa-calendar"></i><span id="termLabel">Fall 2026</span></div>
+        </div>
+        <div class="topbar-right">
+          <label class="role-switch">
+            <span>Viewing as</span>
+            <select id="roleSelect" aria-label="Switch demo role">
+              <option value="principal">Principal</option>
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+            </select>
+          </label>
+          <button class="icon-btn" data-action="open-notifications" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+          <button class="profile-chip" data-action="open-profile" id="profileChip"></button>
+        </div>
+      </header>
+      <main class="main-content" id="appContent" tabindex="-1"></main>
+      <footer class="app-foot">
+        <span>Â© 2026 EduSphere University Â· Frontend demo</span>
+        <span id="demoNote">Demo data may reset when local storage is cleared.</span>
+      </footer>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/principal-academics.js"></script>
+  <script src="js/principal-operations.js"></script>
+  <script src="js/principal-communication.js"></script>
+  <script src="js/teacher.js"></script>
+  <script src="js/student.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

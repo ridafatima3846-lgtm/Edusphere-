@@ -1,0 +1,387 @@
+﻿/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    padding:80px 8%;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text h1{
+    font-size:60px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+
+.hero-text h1{
+    font-size:52px;
+    color:#111827;
+    line-height:1.3;
+}
+
+.hero-text span{
+    color:#1f5f8b;
+}
+
+.hero-text p{
+    margin:30px 0;
+    color:#6b7280;
+    font-size:20px;
+    line-height:1.9;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:16px 34px;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+}
+.btn-primary{
+    background:#1f5f8b;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#174a6d;
+}
+
+.btn-secondary{
+    border:2px solid #1f5f8b;
+    color:#1f5f8b;
+}
+
+.btn-secondary:hover{
+    background:#1f5f8b;
+    color:#fff;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+}
+/* ===========================
+   FEATURES SECTION
+=========================== */
+
+.features{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.section-title h2{
+    font-size:48px;
+    color:#111827;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.section-title p{
+    max-width:800px;
+    margin:auto;
+    color:#6b7280;
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    background:#f8fafc;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.feature-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+}
+
+
+.feature-card h3{
+    color:#1f5f8b;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#555;
+    line-height:1.7;
+}/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+    padding:80px 8%;
+    background:#f5f7fb;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.why-card{
+    background:#ffffff;
+    padding:40px 30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border:1px solid #e5e7eb;
+    transition:.4s;
+}
+
+.why-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+}
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-card h3{
+    color:#1f5f8b;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#555;
+    line-height:1.7;
+}/* ===========================
+   HOW IT WORKS
+=========================== */
+
+.how-it-works{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.step-card{
+    background:#f8fafc;
+    text-align:center;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.step-card:hover{
+    transform:translateY(-8px);
+}
+
+.step-number{
+    width:60px;
+    height:60px;
+    background:#1f5f8b;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:bold;
+    margin:0 auto 20px;
+}
+
+.step-card h3{
+    color:#1f5f8b;
+    margin-bottom:15px;
+}
+
+.step-card p{
+    color:#555;
+    line-height:1.7;
+}
+   /*demo when we attach node js it remove*/
+   /* ===========================
+   STATISTICS
+=========================== */
+
+.statistics{
+    background:#1f5f8b;
+    color:#ffffff;
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat-box h2{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    font-size:18px;
+    letter-spacing:1px;
+}
+/* ===========================
+   TESTIMONIALS
+=========================== */
+
+.testimonials{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#f8fafc;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+.stars{
+    color:#f59e0b;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.testimonial-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.testimonial-card h3{
+    color:#1f5f8b;
+    margin-bottom:5px;
+}
+
+.testimonial-card span{
+    color:#777;
+    font-size:14px;
+}/* ===========================
+   CALL TO ACTION
+=========================== */
+
+.cta{
+    background:#1f5f8b;
+    color:#ffffff;
+    text-align:center;
+    padding:80px 8%;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#111827;
+    color:#ffffff;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-bottom:30px;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin-bottom:12px;
+}
+
+.footer-box ul li a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.footer-box ul li a:hover{
+    color:#ffffff;
+}
+
+footer hr{
+    border:none;
+    border-top:1px solid #374151;
+    margin:25px 0;
+}
+
+.copyright{
+    text-align:center;
+    color:#9ca3af;
+}
+/* ===========================
+   FONT AWESOME ICONS
+=========================== */
+
+.feature-card i,
+.why-card i{
+    color:#1f5f8b;
+    font-size:28px;
+    margin-right:10px;
+}
+

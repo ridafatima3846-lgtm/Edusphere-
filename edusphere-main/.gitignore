@@ -1,0 +1,7 @@
+Search.code-search
+.vscode/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+edusphere.zip

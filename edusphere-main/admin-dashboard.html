@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | EduSphere LMS</title>
+
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f5f8b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+=========================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>EduSphere LMS</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="admin-dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="classes.html">
+                <i class="fa-solid fa-chalkboard"></i>
+                <span>Classes</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Courses</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="results.html">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <span>Results</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="announcements.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>Announcements</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+        <li class="logout-item">
+            <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!--=========================
+        MAIN
+=========================-->
+
+<div class="main-content">
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search...">
+
+        </div>
+
+        <div class="top-icons">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <img
+                src="images/admin-dashboard/admin_dashboard.png"
+                alt="Profile">
+
+        </div>
+
+    </div>
+
+    <!-- Welcome -->
+
+    <div class="welcome">
+
+        <h1>Welcome, Admin</h1>
+
+        <p>
+            Manage your Learning Management System from one place.
+        </p>
+
+    </div>
+
+    <!--=========================
+          STATISTICS CARDS
+    ==========================-->
+
+    <div class="stats-cards">
+
+        <div class="stat-card">
+
+            <div class="stat-icon students-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="totalStudents">0</h3>
+                <p>Total Students</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon teachers-icon">
+                <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="totalTeachers">0</h3>
+                <p>Total Teachers</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon courses-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="totalCourses">0</h3>
+                <p>Total Courses</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon classes-icon">
+                <i class="fa-solid fa-chalkboard"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="totalClasses">0</h3>
+                <p>Total Classes</p>
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon announcements-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+
+            <div class="stat-info">
+                <h3 id="totalAnnouncements">0</h3>
+                <p>Announcements</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+          DASHBOARD CONTENT
+    ==========================-->
+
+    <div class="dashboard-content">
+
+        <!-- Recent Activities -->
+
+        <div class="activities">
+
+            <h2>Recent Activities</h2>
+
+            <ul id="activitiesList">
+
+                <li>No recent activities yet.</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <a href="students.html" class="action-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Add Student
+            </a>
+
+            <a href="teachers.html" class="action-btn">
+                <i class="fa-solid fa-user-tie"></i>
+                Add Teacher
+            </a>
+
+            <a href="courses.html" class="action-btn">
+                <i class="fa-solid fa-book"></i>
+                Add Course
+            </a>
+
+            <a href="results.html" class="action-btn">
+                <i class="fa-solid fa-upload"></i>
+                Upload Result
+            </a>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+          ANNOUNCEMENTS
+    ==========================-->
+
+    <div class="announcement">
+
+        <h2>Latest Announcements</h2>
+
+        <div id="announcementsList">
+
+            <div class="announcement-card">
+
+                <h3>Welcome to EduSphere LMS</h3>
+
+                <p>
+                    New semester classes will start from 15 September.
+                </p>
+
+            </div>
+
+            <div class="announcement-card">
+
+                <h3>Submission Deadline</h3>
+
+                <p>
+                    All pending coursework must be submitted before Friday.
+                </p>
+
+            </div>
+
+            <div class="announcement-card">
+
+                <h3>New Course Added</h3>
+
+                <p>
+                    Artificial Intelligence course is now available.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="js/data.js"></script>
+    <script src="js/demo-seed.js"></script>
+<script src="js/admin-sidebar.js"></script>
+<script src="js/admin-dashboard.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg) { console.log('Service Worker registered'); })
+                .catch(function(err) { console.log('Service Worker registration failed:', err); });
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
