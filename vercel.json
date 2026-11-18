@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/edusphere-main/index.html" },
+    { "source": "/:path*", "destination": "/edusphere-main/:path*" }
+  ]
+}
